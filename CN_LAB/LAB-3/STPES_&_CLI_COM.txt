@@ -1,0 +1,6 @@
+STEPS:
+step-1:Create the Topology
+step-2:config the IP address
+step-3:Router configuration
+step-4:verofy conectivity
+step-5:create standard access control list(ACL)(Blockes specific Host)
