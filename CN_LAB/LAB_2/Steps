@@ -1,22 +1,20 @@
-
-
+STEPS TO PERFORME EXPERIMENT:-
 STEP 1: Create a Topology
 STEP 2: configure the IP addresses
 STEP 3: configure AA server
 STEP 4: Eable AA service on router
->AAA new-model command activates the AAA functionality on cisco router, without this the AAA command will not work, 
-   here the router switches from simle authentication to centralized AAA control
+      >AAA new-model command activates the AAA functionality on cisco router, without this the AAA command will not work, 
+       here the router switches from simle authentication to centralized AAA control
 STEP 5: Configure the router to use AAA router.
-
-this command tells the router where the AAA server is located adn specifies the shared secret key for secure communication 
-STEP 6: configure the authentication method
-"aaa authentication login default group radius local"
->When a user login the router checks AAA sever first for user authenication if it is not available in AAA server 
-  it will check the local database
+      >this command tells the router where the AAA server is located adn specifies the shared secret key for secure communication 
+STEP 6:configure the authentication method
+      "aaa authentication login default group radius local"
+      >When a user login the router checks AAA sever first for user authenication if it is not available in AAA server 
+      it will check the local database
 STEP 7: configure local backup user
-> This step is creating the backup and will be used when the AAA server fails.
+      > This step is creating the backup and will be used when the AAA server fails.
 STEP 8: Set domain name 
-> SSH confuguration
+      > SSH confuguration
 STEP 9:Ensure the host name is set
 STEP 10: Generate RSA key
 STEP 11: Enable SSH version 2
