@@ -6,12 +6,17 @@ step-4:verofy conectivity
 step-5:create standard access control list(ACL)(Blockes specific Host)
 step-6:Apply this ACL to Router Interface
   Apply this ACL on clinet side
-  interface g0/0
+  "interface g0/0
   ip access-group 10 in
-  exit
+  exit"
 step-7:Test Standard ACL
   ping PC0(192.168.1.10)-ping server-pass
   ping PC1(192.168.1.20)-ping server-fail
+step-8:Create Extended ACL
+  allow only HTTP access from PC0 to Server , Deny FTP access from PC1
+  "access-list 100 permit tcp host 192.168.1.10 host 192.168.2.100 eq 80
+   access-list 100 deny tcp host 192.168.1.20 host 192.168.2.100 eq 21
+   access-list 100 permit ip any any"
 
 
 
