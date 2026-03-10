@@ -1,0 +1,17 @@
+DT-10/03/2026
+
+
+QUIZ 1 (2C1)
+
+Question 1: Determine the optimal number of clusters using Elbow Method (5 Marks)
+a) Generate a dataset of shape [8,2].
+b) Draw the scatter plot to visualize the data.
+c) Apply K-Means for different values of k (k = 1 to 6).
+d) Calculate sum of squared distances (inertia).
+e) Determine the optimal value of k using Elbow graph
+
+
+Question 2: Activation Functions (5 Marks)
+a) Write Python functions to implement Step, ReLU and Hyperbolic Tangent activation functions. (3 Marks)
+b) Compute the output of all the above functions for input values:
+x = [-2, -1, 0, 1, 2] (2 Marks)
