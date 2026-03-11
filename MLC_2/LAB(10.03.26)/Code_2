@@ -1,0 +1,41 @@
+from sklearn.neural_network import MLPClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.datasets import make_classification
+from sklearn.metrics import accuracy_score
+
+# Step 1: Generate dataset
+X, y = make_classification(
+    n_samples=300,
+    n_features=4,
+    n_informative=4,
+    n_redundant=0,
+    random_state=1
+)
+
+# Step 2: Split dataset
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=1
+)
+
+# Step 3: Create Multi-Layer Feed Forward Network
+model = MLPClassifier(
+    hidden_layer_sizes=(10, 5),   # two hidden layers
+    activation='relu',
+    learning_rate_init=0.01,
+    max_iter=500
+)
+
+# Step 4: Train the model
+model.fit(X_train, y_train)
+
+# Step 5: Make predictions
+y_pred = model.predict(X_test)
+
+# Step 6: Evaluate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+
+
+
+
+#Output -> Accuracy: 0.9555555555555556
